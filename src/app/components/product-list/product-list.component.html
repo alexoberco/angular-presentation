@@ -1,0 +1,7 @@
+<h2>Productos Disponibles</h2>
+<ul>
+  <li *ngFor="let p of products">
+    {{ p.name }} — Stock: {{ p.stock }} — Precio: {{ priceOf(p) | currency:'USD' }}
+    <button (click)="add(p)" [disabled]="p.stock===0">Añadir al carrito</button>
+  </li>
+</ul>

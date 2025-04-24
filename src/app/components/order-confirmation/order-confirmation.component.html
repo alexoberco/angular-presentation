@@ -1,0 +1,6 @@
+<h2>Pedido(s) confirmado(s)</h2>
+<ul>
+  <li *ngFor="let p of purchases">
+    Pedido #{{ p.id }} => Producto {{ p.productId }}, Cantidad {{ p.quantity }}
+  </li>
+</ul>
