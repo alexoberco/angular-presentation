@@ -1,7 +1,31 @@
+<!-- product-list.component.html -->
 <h2>Productos Disponibles</h2>
+
+<!-- Mensaje de “añadido” -->
+<div *ngIf="addedMessage" class="toast">
+  {{ addedMessage }}
+</div>
+
 <ul>
   <li *ngFor="let p of products">
     {{ p.name }} — Stock: {{ p.stock }} — Precio: {{ priceOf(p) | currency:'USD' }}
-    <button (click)="add(p)" [disabled]="p.stock===0">Añadir al carrito</button>
+
+    <!-- 1. Selector de cantidad -->
+    <input
+      type="number"
+      [(ngModel)]="quantities[p.id!]"
+      [min]="1"
+      [max]="p.stock"
+      [value]="1"
+      class="qty-input"
+    />
+
+    <!-- 2. Botón “Añadir” -->
+    <button
+      (click)="add(p)"
+      [disabled]="p.stock === 0"
+    >
+      Añadir al carrito
+    </button>
   </li>
 </ul>

@@ -1,6 +1,9 @@
-<h2>Carrito de Compras</h2>
+<h2>Mi Carrito</h2>
 <ul>
-  <li *ngFor="let item of items">
-    {{ item.product.name }} — Cantidad: {{ item.quantity }}
+  <li *ngFor="let i of items">
+    {{ i.product.name }} — Cantidad: {{ i.quantity }}
   </li>
 </ul>
+<button (click)="finalizeOrder()" [disabled]="!items.length">
+  Finalizar compra
+</button>

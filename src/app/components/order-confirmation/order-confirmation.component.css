@@ -1,0 +1,25 @@
+.confirmation {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .empty {
+    color: #777;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .orders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 1rem;
+  }
+  .order-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .order-card h3 { margin-top:0; color:#2e7d32; }
+  .order-card ul { padding-left:1rem; margin:0; }
+  

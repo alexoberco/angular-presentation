@@ -1,0 +1,15 @@
+.header-nav {
+    display: flex;
+    background: #333;
+    padding: 1rem;
+  }
+  .header-nav a {
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+  }
+  .header-nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+  }
+  
